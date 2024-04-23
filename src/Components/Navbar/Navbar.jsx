@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className="bg-cyan-600">
       {/* <div onClick={() => setOpen(true)}> */}
 
-      <div className="text-2xl" onClick={() => setOpen(!open)}>
+      <div className="text-2xl md:hidden" onClick={() => setOpen(!open)}>
         {/* {open === true ? "open" : "close"} */}
 
         {open === true ? <IoCloseSharp /> : <IoMdMenu />}
@@ -29,7 +29,7 @@ const Navbar = () => {
 
       {/* <ul className="flex absolute"> */}
       <ul
-        className={`absolute md:flex duration-1000 bg-cyan-600 ${
+        className={`absolute md:static md:flex duration-1000 bg-cyan-600 ${
           // open ? "top-6" : "top-60"
           open ? "top-6" : "-top-60"
         }`}
