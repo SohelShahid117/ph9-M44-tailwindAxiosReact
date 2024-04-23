@@ -2,6 +2,7 @@ import "./App.css";
 import DaisyNav from "./Components/DaisyNav/DaisyNav";
 import LineChart from "./Components/LineChart/LineChart";
 import Navbar from "./Components/Navbar/Navbar";
+import Phones from "./Components/Phones/Phones";
 import PriceOptionsss from "./Components/PriceOptionsss/PriceOptionsss";
 
 //44-1 Setup Tailwind Css With Create React App
@@ -13,6 +14,7 @@ function App() {
       <DaisyNav></DaisyNav>
       <PriceOptionsss></PriceOptionsss>
       <LineChart></LineChart>
+      <Phones></Phones>
       {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
 
       {/* <div className="hero min-h-screen bg-base-200">
