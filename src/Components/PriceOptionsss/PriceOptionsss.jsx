@@ -1,6 +1,7 @@
 import React from "react";
 import PriceOption from "../PriceOption/PriceOption";
 //44-4 Simple Pricing Option Using React And Tailwind
+//44-5 Responsive Pricing Card With Tailwind And React Icons
 
 const PriceOptionsss = () => {
   const priceOptionsss = [
@@ -55,9 +56,11 @@ const PriceOptionsss = () => {
   return (
     <div>
       <h2 className="text-5xl">Best Prices in the town</h2>
-      {priceOptionsss.map((option) => (
-        <PriceOption key={option.id} option={option}></PriceOption>
-      ))}
+      <div className="grid md:grid-cols-3 gap-5 m-10">
+        {priceOptionsss.map((option) => (
+          <PriceOption key={option.id} option={option}></PriceOption>
+        ))}
+      </div>
     </div>
   );
 };
