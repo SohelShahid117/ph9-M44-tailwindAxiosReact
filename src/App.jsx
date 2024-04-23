@@ -1,5 +1,6 @@
 import "./App.css";
 import DaisyNav from "./Components/DaisyNav/DaisyNav";
+import LineChart from "./Components/LineChart/LineChart";
 import Navbar from "./Components/Navbar/Navbar";
 import PriceOptionsss from "./Components/PriceOptionsss/PriceOptionsss";
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar></Navbar>
       <DaisyNav></DaisyNav>
       <PriceOptionsss></PriceOptionsss>
+      <LineChart></LineChart>
       {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
 
       {/* <div className="hero min-h-screen bg-base-200">
