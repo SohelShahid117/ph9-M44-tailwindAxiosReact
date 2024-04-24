@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import Phone from "../Phone/Phone";
 import axios from "axios";
 import { data } from "autoprefixer";
+import { Audio, Circles } from "react-loader-spinner";
 //https://axios-http.com/docs/intro
 //https://github.com/ProgrammingHero1/broken-phone?tab=readme-ov-file
 //https://recharts.org/en-US/examples/BarChartWithCustomizedEvent
 //44-7 Axios, Data Extraction And Data Processing Bar Chart
+//44-8 Explore React Awesome Components
 
 import {
   BarChart,
@@ -21,6 +23,7 @@ import {
 
 const Phones = () => {
   const [phones, setPhones] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   //   useEffect(() => {
   //     fetch(`https://openapi.programming-hero.com/api/phones?search=iphone`)
@@ -49,16 +52,37 @@ const Phones = () => {
         });
         console.log(phnDetailsData);
         setPhones(phnDetailsData);
+        setLoading(false);
       });
   }, []);
   console.log(phones);
 
   return (
     <div>
-      <h1>Phone:{phones.length}</h1>
+      <h1 className="text-5xl">Phone:{phones.length}</h1>
       {/* {phones.map(() => (
         <Phone></Phone>
       ))} */}
+      {loading && (
+        <Audio
+          height="100"
+          width="100"
+          color="#4fa94d"
+          ariaLabel="audio-loading"
+          wrapperStyle={{}}
+          wrapperClass="wrapper-class"
+          visible={true}
+        />
+      )}
+      <Circles
+        height="80"
+        width="80"
+        color="#4fa94d"
+        ariaLabel="circles-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+      />
       <BarChart width={1000} height={600} data={phones}>
         <XAxis dataKey="name"></XAxis>
         <YAxis dataKey="price"></YAxis>
